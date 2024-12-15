@@ -28,7 +28,7 @@ async def handle_faceswap(source_file: UploadFile, target_file: UploadFile) -> A
     # --processors face_swapper --face-mask-types box --face-swapper-model inswapper_128
     command = [
         "python", "facefusion.py", "headless-run", 
-        "-processors", "face_swapper", "--face-mask-types", "box", "--face-swapper-model", "inswapper_128"
+        "--processors", "face_swapper", "--face-mask-types", "box", "--face-swapper-model", "inswapper_128"
         "-s", source_file_path, 
         "-t", target_file_path, 
         "-o", output_file_path
